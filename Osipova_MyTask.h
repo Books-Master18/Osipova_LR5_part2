@@ -110,14 +110,15 @@ void enterChar(char& varLink, string label)
 	varLink = str_input[0];
 
 }
+
+
 //глобальные переменные
 
-// char ch1;
-// char ch2;
+char ch1, ch2;
 
 
 
-void inputFirstChar(char& ch1) {
+void inputFirstChar() {
 	enterChar(ch1, "Введите первый символ");
 
 		//branch_fun_1
@@ -125,9 +126,10 @@ void inputFirstChar(char& ch1) {
 }
 
 
+
 // Функция для ввода второго символа
 
-void inputSecondChar(char& ch2) {
+void inputSecondChar() {
 	enterChar(ch2, "Введите второй символ");
 
 
@@ -138,9 +140,10 @@ void inputSecondChar(char& ch2) {
 
 
 
+
 // Функция для вывода символа и его кода ASCII
 
-void printCharAndAscii(char ch1, char ch2) {
+void printCharAndAscii() {
 	cout << "Символ: " << ch1 << ", Код ASCII: " << (int)ch1 << endl;
 cout << "Символ: " << ch2 << ", Код ASCII: " << (int)ch2 << endl;
 
@@ -154,9 +157,9 @@ cout << "Символ: " << ch2 << ", Код ASCII: " << (int)ch2 << endl;
 // Функция для вывода суммы кодов ASCII
 
 int printAsciiSum(char ch1, char ch2) {
-    int asciiSum = (int)ch1 + (int)ch2;
-    std::cout << "Сумма кодов ASCII: " << asciiSum << std::endl;
-    return asciiSum;
+    int Sum = (int)ch1 + (int)ch2;
+    cout << "Сумма кодов ASCII: " << Sum << std::endl;
+    return Sum;
 }
 
 #endif

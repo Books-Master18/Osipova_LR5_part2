@@ -1,12 +1,15 @@
 #include <iostream>
+#include <map>
+#include <string>
 #include <functional>
 #include "Osipova_MyTask.h"
 
 struct MenuItem {
-    std::string title;
-    std::function<void()> action;
 
-    MenuItem(std::string t, std::function<void()> a) : title(t), action(a) {}
+	string title;
+
+	function<void()> action;
+
 };
 
 
