@@ -1,12 +1,12 @@
 #include <iostream>
+#include <functional>
 #include "Osipova_MyTask.h"
 
 struct MenuItem {
+    std::string title;
+    std::function<void()> action;
 
-	string title;
-
-	function<void()> action;
-
+    MenuItem(std::string t, std::function<void()> a) : title(t), action(a) {}
 };
 
 
@@ -20,11 +20,8 @@ int main() {
 	{
 
 		{ 1,{" Ввести первый символ", inputFirstChar } },
-
 		{2, {" Ввести второй символ", inputSecondChar}},
-
 		{3, {" Вывести каждый символ и код ASCII", printCharAndAscii}},
-
 		{4, {" Вывести сумму кодов ASCII символов ch1 и ch2", printAsciiSum}},
 
 	};

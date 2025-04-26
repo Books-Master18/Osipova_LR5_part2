@@ -14,17 +14,10 @@ using namespace std;
 bool UserChar(string input) {
 
 	//если строка пустая - ввод некорректен
-
 	if ((input.empty()) || (input.length() != 1)) return false;
-
-
-
 	return true;
 
 }
-
-
-
 
 
 bool UserInput(string input) {
@@ -38,9 +31,7 @@ bool UserInput(string input) {
 	try {
 
 		//преобразование введенного значения в тип int
-
 		int number = stoi(input);
-
 		if (number < 0) return false;
 
 	}
@@ -54,7 +45,6 @@ bool UserInput(string input) {
 	}
 
 	return true;
-
 }
 
 
@@ -66,31 +56,23 @@ bool UserInput(string input) {
 void enterNumber(int& varLink, string label)
 
 {
-
 	string str_input;
-
-	cout << label << " - ";
+	cout << label << " = ";
 
 	//ввод значения в текстовом виде
-
 	getline(cin, str_input);
 
 	//пока ввод некорректен
 
 	while (!UserInput(str_input)) {
-
 		cout << label << " = ";
-
 		//ввод значения в текстовом виде
-
 		getline(cin, str_input);
 
 	}
 
 	//присвоение переменной varLink преобразованного 
-
 	// в тип int 
-
 	//правильно введенного текстового значения 
 
 	varLink = stoi(str_input);
@@ -104,13 +86,10 @@ void enterNumber(int& varLink, string label)
 void enterChar(char& varLink, string label)
 
 {
-
 	string str_input;
-
-	cout << label << " - ";
+	cout << label << " = ";
 
 	//ввод значения в текстовом виде
-
 	getline(cin, str_input);
 
 	//пока ввод некорректен
@@ -120,15 +99,12 @@ void enterChar(char& varLink, string label)
 		cout << label << " = ";
 
 		//ввод значения в текстовом виде
-
 		getline(cin, str_input);
 
 	}
 
 	//присвоение переменной varLink преобразованного 
-
 	// в тип int 
-
 	//правильно введенного текстового значения 
 
 	varLink = str_input[0];
@@ -136,11 +112,12 @@ void enterChar(char& varLink, string label)
 }
 //глобальные переменные
 
-char ch1, ch2;
+// char ch1;
+// char ch2;
 
 
 
-void inputFirstChar() {
+void inputFirstChar(char& ch1) {
 	enterChar(ch1, "Введите первый символ");
 
 		//branch_fun_1
@@ -148,10 +125,9 @@ void inputFirstChar() {
 }
 
 
-
 // Функция для ввода второго символа
 
-void inputSecondChar() {
+void inputSecondChar(char& ch2) {
 	enterChar(ch2, "Введите второй символ");
 
 
@@ -162,10 +138,9 @@ void inputSecondChar() {
 
 
 
-
 // Функция для вывода символа и его кода ASCII
 
-void printCharAndAscii() {
+void printCharAndAscii(char ch1, char ch2) {
 	cout << "Символ: " << ch1 << ", Код ASCII: " << (int)ch1 << endl;
 cout << "Символ: " << ch2 << ", Код ASCII: " << (int)ch2 << endl;
 
@@ -178,12 +153,10 @@ cout << "Символ: " << ch2 << ", Код ASCII: " << (int)ch2 << endl;
 
 // Функция для вывода суммы кодов ASCII
 
-void printAsciiSum() {
-	cout << "Сумма кодов ASCII: " << (int)ch1 + (int)ch2 << endl;
-	//branch_fun_4
-
-
-
+int printAsciiSum(char ch1, char ch2) {
+    int asciiSum = (int)ch1 + (int)ch2;
+    std::cout << "Сумма кодов ASCII: " << asciiSum << std::endl;
+    return asciiSum;
 }
 
 #endif
