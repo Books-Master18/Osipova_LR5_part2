@@ -7,7 +7,6 @@
 struct MenuItem {
 
 	string title;
-
 	function<void()> action;
 
 };
